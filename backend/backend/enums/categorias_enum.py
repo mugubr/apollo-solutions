@@ -1,0 +1,16 @@
+from enum import Enum
+
+
+class CategoriasEnum(Enum):
+    ELETROPORTATEIS = 1
+    MOVEIS = 2
+    GELADEIRAS = 3
+    SMARTPHONES = 4
+    ELETRONICOS = 5
+
+
+CATEGORIA_ELETROPORTATEIS = CategoriasEnum.ELETROPORTATEIS.value
+CATEGORIA_MOVEIS = CategoriasEnum.MOVEIS.value
+CATEGORIA_GELADEIRAS = CategoriasEnum.GELADEIRAS.value
+CATEGORIA_SMARTPHONES = CategoriasEnum.SMARTPHONES.value
+CATEGORIA_ELETRONICOS = CategoriasEnum.ELETRONICOS.value

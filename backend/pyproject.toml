@@ -8,6 +8,10 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "3.12.*"
 fastapi = {extras = ["standard"], version = "^0.115.0"}
+sqlalchemy = "^2.0.35"
+pydantic-settings = "^2.5.2"
+psycopg = {extras = ["binary"], version = "^3.2.3"}
+alembic = "^1.13.3"
 
 
 [tool.poetry.group.dev.dependencies]
@@ -37,8 +41,10 @@ lint = 'ruff check . && ruff check . --diff'
 format = 'ruff check . --fix && ruff format .'
 run = 'fastapi dev backend/app.py'
 pre_test = 'task lint'
-test = 'pytest -s -x --cov=fast_zero -vv'
+test = 'pytest -s -x --cov=backend -vv'
 post_test = 'coverage html'
+revision = "alembic revision --autogenerate"
+upgrade = "alembic upgrade head"
 
 [build-system]
 requires = ["poetry-core"]
