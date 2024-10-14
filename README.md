@@ -74,11 +74,29 @@ Como executar o projeto localmente
    ```sh
    docker-compose up --build
    ```
-4. Após os containers estarem rodando, acesse a documentação da API  em ```https://localhost:8000/docs``` ou ```https://localhost:8000/redoc```
+4. Após os containers estarem ativos, acesse a documentação da API  em ```https://localhost:8000/docs``` ou ```https://localhost:8000/redoc```
    
 
 5. As telas estarão disponíveis em ```https://localhost:3000/``` (Lista de Produtos) e ```https://localhost:3000/novo``` (Adicionar Produto)
 
 
 <p align="right">(<a href="#readme-top">topo</a>)</p>
+
+
+## Respostas
+**1. Quais seriam as suas primeiras melhorias caso possuísse mais tempo de implementação?**
+
+  Acredito que a primeira melhoria seria a adição das telas referentes à atualização de produtos, listagem de categorias (com a funcionalidade de exclusão das mesmas), cadastro/atualização de categorias e a tela referente às promoções (com funcionalidades de cadastro, atualização e exclusão das mesmas), pois várias dessas funcionalidades já se encontram implementadas, a nível de backend.
+  Adicionar testes unitários e de integração no backend e frontend, garantindo a estabilidade da aplicação ao longo do tempo, também seria uma prioridade.
+
+**2. Pensando na sua solução, como seria a manutenção em caso da adição de novas
+categorias de produtos? O que precisaria ser alterado?**
+
+  A única alteração necessária seria a implementação de uma tela para o cadastro dessas novas categorias, pois a funcionalidade já existe, a nível de backend.
+
+**3. Caso fosse necessário, quais alterações precisariam ser feitas para suportar atualizações na
+porcentagem de desconto da categoria de produto, de modo que, sempre que a porcentagem
+de desconto fosse alterada, o novo preço fosse refletido em todos os produtos da mesma?**
+
+   Os preços promocionais já são atualizados dinamicamente, dependendo do valor de porcentagem de desconto por categoria de produto, então a única necessidade seria a implementação de uma tela referente às promoções (com funcionalidades de cadastro, atualização e exclusão das mesmas).
 
