@@ -26,17 +26,17 @@ services:
     networks:
       - apollo_network
 
-  # frontend:
-  #   build:
-  #     context: .
-  #     dockerfile: ./frontend/Dockerfile
-  #   container_name: frontend
-  #   ports:
-  #     - "3000:80"
-  #   stdin_open: true
-  #   tty: true
-  #   networks:
-  #     - apollo_network
+  frontend:
+    build:
+      context: .
+      dockerfile: ./frontend/Dockerfile
+    container_name: frontend
+    ports:
+      - "3000:80"
+    stdin_open: true
+    tty: true
+    networks:
+      - apollo_network
 
 volumes:
   pgdata:
